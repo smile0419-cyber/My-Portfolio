@@ -1,3 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+}
+
+
 /* 初期状態（透明にしておく） */
 .section {
     opacity: 0;
@@ -302,5 +317,17 @@ footer {
     nav a, .button {
         padding: 8px 15px;
         font-size: 14px; /* 少し小さくする */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* 例えば、特定のセクションや要素の余白を調整 */
+    section {
+        padding: 20px;  /* スマホでの余白を減らす */
     }
 }
