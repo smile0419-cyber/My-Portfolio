@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+}
+
+#about {
+    background: linear-gradient(135deg, #FFB6C1, #FFD700); /* パステルピンク～イエロー */
+    color: #333;
+    padding: 50px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px;
+}
+
+#projects {
+    background: linear-gradient(135deg, #B0E0E6, #98FB98); /* パステルブルー～ライトグリーン */
+    color: #333;
+    padding: 50px 20px;
+}
+
+.project {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.project img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* About Me セクションのレイアウト修正 */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.img-zibun img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text {
+    text-align: left;
+    max-width: 580px;
+}
+
+/* 学習言語アイコン */
+.gengo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+#contact {
+    background: linear-gradient(135deg, #D8BFD8, #FFC0CB); /* ラベンダー～パステルピンク */
+    color: #333;
+    padding: 50px 20px;
+}
