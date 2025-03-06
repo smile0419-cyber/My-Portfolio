@@ -18,8 +18,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #aa50bfc7;
+    padding: 5px;
+    background-color: #a87fb1c7;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -151,7 +151,7 @@ section {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1e1e1e;
+    background-color: #a87fb1c7;
 }
 
 #contact {
