@@ -1,31 +1,29 @@
-// Intersection Observerの設定
 const sections = document.querySelectorAll('.section');
 
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        if (position < window.innerHeight - 100) {
+            section.classList.add('visible');
+        }
+    });
+});
+
+
 const observerOptions = {
-    root: null, // ビューポートを監視対象
-    threshold: 0.5 // セクションが50%見えたらアニメーション開始
+    root: null,
+    threshold: 0.5 // セクションの50%が画面に見えたときに発火
 };
 
-// Intersection Observerのコールバック関数
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("visible"); // visibleクラスを追加してアニメーションをトリガー
+            entry.target.classList.add("visible"); // アニメーションを追加
             observer.unobserve(entry.target); // 観察を停止
         }
     });
 }, observerOptions);
 
-// セクションごとにObserverを適用
 sections.forEach(section => {
     observer.observe(section);
-});
-
-document.querySelector('.hamburger').addEventListener('click', () => {
-    document.querySelector('nav').classList.toggle('active');
-});
-
-// ハンバーガーメニューの開閉
-document.querySelector(".hamburger").addEventListener("click", function() {
-    document.querySelector(".mobile-menu").classList.toggle("active");
 });
