@@ -24,3 +24,8 @@ sections.forEach(section => {
 document.querySelector('.hamburger').addEventListener('click', () => {
     document.querySelector('nav').classList.toggle('active');
 });
+
+// ハンバーガーメニューの開閉
+document.querySelector(".hamburger").addEventListener("click", function() {
+    document.querySelector(".mobile-menu").classList.toggle("active");
+});

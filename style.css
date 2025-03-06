@@ -331,3 +331,33 @@ footer {
         padding: 20px;  /* スマホでの余白を減らす */
     }
 }
+
+ /* ハンバーガーメニューはスマホでは非表示 */
+ .hamburger, .mobile-menu {
+    display: none;
+}
+
+/* スマホサイズ（768px以下）でのスタイル変更 */
+@media (max-width: 768px) {
+    .header {
+        display: none; /* PC用ヘッダーを非表示 */
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    .mobile-menu {
+        display: none;
+        background: #444;
+        color: white;
+        padding: 10px;
+    }
+    .mobile-menu.active {
+        display: block;
+    }
+}
