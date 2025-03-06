@@ -48,15 +48,44 @@ section {
     animation: fadeInLeft 1s ease-in-out forwards;
 }
 
-.project {
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    color: #242121;
-    border: 2px solid #ffffff;
+.project1, .project2 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #fff0cd;
 }
 
-.project h3 {
+.project1 .box-title, .project2 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    background: #fff0cd;
+    color: #151515;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+.project2 {
+    margin-top: 40px;
+}
+
+.project1:after, .project2:after {
+    position: absolute;
+    content: '';
+    right: -7px;
+    top: -7px;
+    border-width: 0 15px 15px 0;
+    border-style: solid;
+    border-color: #ffdb88 #fff #ffdb88;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.project1 h3 , .project2 h3{
     position: relative;
     color: #158b2b;
     font-size: 20px;
@@ -65,7 +94,7 @@ section {
     margin: 1.5em 0;
 }
 
-.project h3:before {
+.project1 h3:before, .project2 h3:before{
     content: "";
     position: absolute;
     top: -8px;
@@ -80,7 +109,7 @@ section {
     transform: translateX(-50%);
 }
 
-.project img {
+.project1 img, .project2 img{
     width: 600px;
     height: 400px;
     object-fit: cover;
