@@ -1,15 +1,4 @@
-/* 初期状態（透明にしておく） */
-.section {
-    opacity: 0;
-    transform: translateY(50px); /* 下に配置しておく */
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
 
-/* スクロールで表示 */
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 
 body {
@@ -101,7 +90,7 @@ section {
     border-radius: 10px;
 }
 
-/* About Me セクションのレイアウト修正 */
+
 .about-container {
     display: flex;
     justify-content: center;
@@ -145,82 +134,6 @@ footer {
     padding: 50px 20px;
     animation: fadeInRight 1s ease-in-out forwards;
 }
-
-
-
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* 初期状態 */
-.section {
-    opacity: 0; /* 初期状態で非表示 */
-    transform: translateX(100px); /* 右からスライドイン */
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.section.visible {
-    opacity: 1; /* 表示 */
-    transform: translateX(0); /* 元の位置に戻す */
-}
-
-/* 右からスライドイン（自己紹介と連絡先） */
-#about, #contact {
-    animation: slideRight 1s ease-out forwards;
-}
-
-/* 左からスライドイン（作品紹介） */
-#projects {
-    animation: slideLeft 1s ease-out forwards;
-}
-
-/* 右からスライドイン用のアニメーション */
-@keyframes slideRight {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* 左からスライドイン用のアニメーション */
-@keyframes slideLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* アニメーションの遅延を設定 */
-#about {
-    animation-delay: 0.5s; 
-}
-
-#projects {
-    animation-delay: 1s;
-}
-
-#contact {
-    animation-delay: 1.5s;
-}
-
 /* スマホサイズ用の調整 */
 @media (max-width: 768px) {
     nav ul {
