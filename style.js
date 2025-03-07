@@ -9,21 +9,12 @@ window.addEventListener('scroll', () => {
     });
 });
 
+const mobile_menu_open = document.querySelector(".hamburger");
+const mobile_menu = document.querySelector(".mobile-menu");
 
-const observerOptions = {
-    root: null,
-    threshold: 0.5 // セクションの50%が画面に見えたときに発火
-};
+mobile_menu_open.addEventListener("click", () => {
+    
+    mobile_menu.classList.toggle("open");
+    console.log("clicked");
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible"); // アニメーションを追加
-            observer.unobserve(entry.target); // 観察を停止
-        }
-    });
-}, observerOptions);
-
-sections.forEach(section => {
-    observer.observe(section);
 });
